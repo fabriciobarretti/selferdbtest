@@ -9,3 +9,13 @@ let clientStatus = document.getElementById("status-input");
 let addButton = document.getElementById("add-btn");
 let showAllClientsButton = document.getElementById("show-all-clients-btn");
 
+let client = {
+    Name: clientName,
+    Age: clientAge,
+    Phone: clientPhone,
+    City: clientCity,
+    Country: clientCountry,
+    Status: clientStatus
+}
+
+module.exports = client;
