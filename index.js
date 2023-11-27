@@ -9,20 +9,15 @@ let clientStatus = document.getElementById("status-input");
 let addButton = document.getElementById("add-btn");
 let showAllClientsButton = document.getElementById("show-all-clients-btn");
 
-
-
-addButton.onclick = async function(){
-    
-    let client = {
-        name: clientName.value,
-        age: clientAge.value,
-        phone: clientPhone.value,
-        city: clientCity.value,
-        country: clientCountry.value,
-        status: clientStatus.checked
-    }
-    // window.location("/addclient"); // check if this address works
-    console.log(client);
-}
-
-// module.exports = client; // trying to export to server.js?
+// addButton.onclick = async function(){ 
+//     let client = {
+//         name: clientName.value,
+//         age: clientAge.value,
+//         phone: clientPhone.value,
+//         city: clientCity.value,
+//         country: clientCountry.value,
+//         status: clientStatus.checked
+//     }
+//     // window.location("/addclient"); // check if this address works
+//     console.log(client);
+// }

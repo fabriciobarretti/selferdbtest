@@ -5,27 +5,51 @@
     </head>
     
     <body>
-        <div id="add-client-body">            
-            <div id="forms-body">
-                <p id="client-name-line"><b>Client name</b>: <input type="text" class="input" name="client-name-input" id="client-name-input"></p>
+        <form method="POST" action="http://localhost:3302/addclient">
 
-                <p id="age-line"><b>Age</b>: <input type="text" class="input" name="age-input" id="age-input"></p>
-
-                <p id="size-line"><b>Phone</b>: <input type="text" class="input" name="phone-input" id="phone-input"></p>
-                <p id="city-line"><b>City</b>: <input type="text" class="input" name="city-input" id="city-input"></p>
-                <p id="country-line"><b>Country</b>: <input type="text" class="input" name="country-input" id="country-input"></p>
-
-                <p id="status-line"><b>Active?</b>
-                    <label class="switch">
-                    <input type="checkbox" id="status-input">
-                    <span class="slider round"></span>
-                  </label></p>
-            </div>
-            <div id="add">
-                <button id="add-btn">Add client</button>
-                <button id="show-all-clients-btn">Show all clients</button>
-            </div>
+            <label for="client-name">Name:</label>
+            <input type="text" id="client-name" name="client-name"><br><br>
             
-            <script src="index.js"></script>   
+            <label for="client-age">Age:</label>
+            <input type="text" id="client-age" name="client-age"><br><br>
+            
+            <label for="client-phone">Phone Number:</label>
+            <input type="text" id="client-phone" name="client-phone"><br><br>
+
+            <label for="client-city">City:</label>
+            <input type="text" id="client-city" name="client-city"><br><br>
+            
+            <label for="client-country">Country:</label>
+            <input type="text" id="client-country" name="client-country"><br><br>
+            
+            <label for="client-status" class="switch">Status:</label>
+            <input type="checkbox" id="client-status" name="client-status"><br><br>
+
+            <input type="submit" value="Submit" class="btn">
+
+
+            <!-- Old code brought from "selfer" -->
+            <!-- <div id="add-client-body">            
+                <div id="forms-body">
+                    <p id="client-name-line"><b>Client name</b>: <input type="text" class="input" name="client-name-input" id="client-name-input"></p>
+    
+                    <p id="age-line"><b>Age</b>: <input type="text" class="input" name="age-input" id="age-input"></p>
+    
+                    <p id="phone-line"><b>Phone</b>: <input type="text" class="input" name="phone-input" id="phone-input"></p>
+                    <p id="city-line"><b>City</b>: <input type="text" class="input" name="city-input" id="city-input"></p>
+                    <p id="country-line"><b>Country</b>: <input type="text" class="input" name="country-input" id="country-input"></p>
+    
+                    <p id="status-line"><b>Active?</b>
+                        <label class="switch">
+                        <input type="checkbox" id="status-input">
+                        <span class="slider round"></span>
+                      </label></p>
+                </div>
+                <div id="add">
+                    <button id="add-btn">Add client</button>
+                    <button id="show-all-clients-btn">Show all clients</button>
+                </div>     -->
+        </form>
+            <!-- <script src="index.js"></script>    -->
     </body>
 </html>
