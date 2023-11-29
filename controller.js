@@ -17,18 +17,22 @@ module.exports = {
     addClient: async (req, res) => {
         let json = {error:'', result:{}};
 
-        let name = req.body.client-name-input;
-        let age = req.body.age-input;
+        let client = req.body;
 
-        if (name && age){
-            let adding = await queries.addClient(name, age);
-            json.result = {
-                name,
-                age
-            };
+        if (client){
+            let adding = await queries.addClient(client.clientName, client.clientAge);
+            json.result = client;
+
+            console.log(`Client ${client.clientName} was added succesfully.`);
+            
         } else {
             json.error = 'No fields detected.';
         }
         res.json(json);
-    }
+    },
+
+    // createTable: async (req,res) => {
+    //     let json = {error:'', result: {}};
+
+    // }
 };

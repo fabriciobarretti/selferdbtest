@@ -4,7 +4,7 @@ module.exports = {
     getAllClients: () => {
         return new Promise((accepted, rejected) => {
     
-            db.query('SELECT * FROM selferdbtest', (err, results)=>{
+            db.query('SELECT * FROM clients2', (err, results)=>{
                 if(err) { rejected(err); return; }
                 accepted(results);
             });
@@ -13,7 +13,7 @@ module.exports = {
 
     addClient: (name, age) => {
       return new Promise((accepted, rejected) => {
-        db.query('INSERT INTO selferdbtest (name, age) VALUES (?, ?)',
+        db.query('INSERT INTO clients2 (name, age) VALUES (?, ?)',
         [name, age],
         (error, results) => {
           if(error){ rejected(error); return; }
