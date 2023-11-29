@@ -4,35 +4,28 @@ module.exports = {
     getAllClients: () => {
         return new Promise((accepted, rejected) => {
     
-            db.query('SELECT * FROM selferdbtest', (error, results)=>{
-                if(error) { rejected(error); return; }
+            db.query('SELECT * FROM selferdbtest', (err, results)=>{
+                if(err) { rejected(err); return; }
                 accepted(results);
             });
         });
     },
 
-    addClient: () => {
-      
-    }
-
-};
-
-  // Adding Client ^ Move up!!
-  app.get("/addclient", (req, res) => {
-    let post = client; // Change this. It won't work.
-    let sql = "INSERT INTO employee SET ?";
-
-    let query = db.query(sql, post, (err) => {
-        if (err) {
-          throw err;
+    addClient: (name, age) => {
+      return new Promise((accepted, rejected) => {
+        db.query('INSERT INTO selferdbtest (name, age) VALUES (?, ?)',
+        [name, age],
+        (error, results) => {
+          if(error){ rejected(error); return; }
+          accepted(results);
         }
-        // res.send("Employee 1 added");
-        console.log(`Client added`);
-    });
-  });
-
+        );
+      });
+    }
+  };
 
 // Old code used for creating the database and table.
+// The code used here came from: https://www.simplilearn.com/tutorials/nodejs-tutorial/nodejs-mysql
 
 //   // Creating DB
 // app.get("/createdb", (req, res) => {

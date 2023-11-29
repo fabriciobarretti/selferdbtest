@@ -15,6 +15,20 @@ module.exports = {
 },
 
     addClient: async (req, res) => {
-        
+        let json = {error:'', result:{}};
+
+        let name = req.body.client-name-input;
+        let age = req.body.age-input;
+
+        if (name && age){
+            let adding = await queries.addClient(name, age);
+            json.result = {
+                name,
+                age
+            };
+        } else {
+            json.error = 'No fields detected.';
+        }
+        res.json(json);
     }
 };
