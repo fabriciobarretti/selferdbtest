@@ -6,54 +6,15 @@
     
     <body>
         <form method="POST" action="http://localhost:3302/addclient">
-
             <label for="clientName">Name:</label>
             <input type="text" id="clientName" name="clientName"><br><br>
             
             <label for="clientAge">Age:</label>
             <input type="text" id="clientAge" name="clientAge"><br><br>
-            
-            <!-- <label for="client-phone">Phone Number:</label>
-            <input type="text" id="phone-input" name="phone-input"><br><br>
-
-            <label for="client-city">City:</label>
-            <input type="text" id="city-input" name="city-input"><br><br>
-            
-            <label for="client-country">Country:</label>
-            <input type="text" id="country-input" name="country-input"><br><br>
-            
-            <label for="client-status" class="switch">Status:</label>
-            <input type="checkbox" id="status-input" name="status-input"><br><br> -->
-
             <input type="submit" value="Submit" class="btn" id="submit-btn">
-
-
-            <!-- Old code brought from "selfer" -->
-            <!-- <div id="add-client-body">            
-                <div id="forms-body">
-                    <p id="client-name-line"><b>Client name</b>: <input type="text" class="input" name="client-name-input" id="client-name-input"></p>
-    
-                    <p id="age-line"><b>Age</b>: <input type="text" class="input" name="age-input" id="age-input"></p>
-    
-                    <p id="phone-line"><b>Phone</b>: <input type="text" class="input" name="phone-input" id="phone-input"></p>
-                    <p id="city-line"><b>City</b>: <input type="text" class="input" name="city-input" id="city-input"></p>
-                    <p id="country-line"><b>Country</b>: <input type="text" class="input" name="country-input" id="country-input"></p>
-    
-                    <p id="status-line"><b>Active?</b>
-                        <label class="switch">
-                        <input type="checkbox" id="status-input">
-                        <span class="slider round"></span>
-                      </label></p>
-                </div>
-                <div id="add">
-                    <button id="add-btn">Add client</button>
-                    <button id="show-all-clients-btn">Show all clients</button>
-                </div>     -->
         </form>
-
-        <!-- <form method="POST" action="http://localhost:3302/createtable">
-            <input type="submit" value="Create Table" class="btn" id="createTable">
-        </form> -->
-        <!-- <script src="index.js"></script>    -->
+        <form method="get" action="http://localhost:3302/clients">
+            <button type="submit">Show clients</button>
+        </form>
     </body>
 </html>
