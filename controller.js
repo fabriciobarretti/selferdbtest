@@ -39,11 +39,11 @@ module.exports = {
         
         // Pegar o nome de cada key e jogar numa array
         // let dataLength = Object.keys(showing);
-        let dataLength = Object.keys(showing[0]);
+        let dataKeys = Object.keys(showing[0]);
 
         console.log(showing);
-        console.log(dataLength);
-        res.render('clients', { data: clientlist.result, dataLength: dataLength});
+        console.log(dataKeys);
+        res.render('clients', { data: clientlist.result, dataKeys: dataKeys});
     }
 
     // createTable: async (req,res) => {
