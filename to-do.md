@@ -1,9 +1,9 @@
-
-// Doing
-
+// Done
+- Output the client's name from the form.
+- Insert values from the forms to the actual database. [There was a problem with getting the values across different .js files]
 
 // To do
-Insert values from the forms to the actual database. [There was a problem with getting the values across different .js files]
+Redirect to the client page from the /clients page.
 
-// Done
-Output the client's name from the form.
+// Doing
+Adding a link to the client when showing the client list.

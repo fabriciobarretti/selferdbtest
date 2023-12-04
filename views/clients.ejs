@@ -11,18 +11,17 @@
   <table>
     <thead>
       <tr>
-        <% dataKeys.forEach( (rowName) => { %>
-            <th><%= rowName %></th>
+        <% dataKeys.forEach( (colHeader) => { %>
+            <th><%= colHeader %></th>
         <% });%>
       </tr>
     </thead>
     <tbody>
-      <% data.forEach((row) => { %>
+      <% clientlist.forEach((client) => { %>
         <tr>
-          <td><%= row.id %></td>
-          <td><%= row.name %></td>
-          <td><%= row.age %></td>
-          <!-- Add more columns based on your table structure -->
+          <td><%= client.id %></td>
+          <td><%= client.name %></td>
+          <td><%= client.age %></td>
         </tr>
       <% }); %>
     </tbody>
