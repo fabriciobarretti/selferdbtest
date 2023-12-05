@@ -1,6 +1,10 @@
 const queries = require('./queries');
 
 module.exports = {
+    index: async (req, res) => {
+        res.render('index');
+    },
+
     getAllClients: async (req, res) => {
         let json = {error:'', result:[]};
 

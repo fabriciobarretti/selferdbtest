@@ -20,7 +20,7 @@
       <% clientlist.forEach((client) => { %>
         <tr>
           <td><%= client.id %></td>
-          <td><%= client.name %></td>
+          <td><a href="http://localhost:3302/client/<%= client.id %>"><%= client.name %></a></td>
           <td><%= client.age %></td>
         </tr>
       <% }); %>
