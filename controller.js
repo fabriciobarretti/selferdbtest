@@ -68,5 +68,5 @@ module.exports = {
         let id = req.params.id;
         let client = await queries.client(id);
         res. render(`edit-client`, {client: client });
-    }
+    }   
 };
