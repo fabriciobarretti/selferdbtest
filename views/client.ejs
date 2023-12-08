@@ -12,5 +12,7 @@
     <li><b>ID:</b> <%= client.id %></li>
     <li><b>Age:</b> <%= client.age %></li>
   </ul>
+  <button id="goBackBtn" onclick="location.href='http://localhost:3302/clients'">Go back</button>
+  <button id="editClientBtn" onclick="location.href='http://localhost:3302/client/<%= client.id %>/edit'">Edit</button>
 </body>
 </html>

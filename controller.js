@@ -62,5 +62,11 @@ module.exports = {
         console.log(client);
         res.render('client', {client: client});
         
+    },
+
+    editClient: async (req, res) => {
+        let id = req.params.id;
+        let client = await queries.client(id);
+        res. render(`edit-client`, {client: client });
     }
 };
