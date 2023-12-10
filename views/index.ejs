@@ -5,16 +5,17 @@
     </head>
     
     <body>
+        <br>
         <form method="POST" action="http://localhost:3302/addclient">
             <label for="clientName">Name:</label>
             <input type="text" id="clientName" name="clientName"><br><br>
             
             <label for="clientAge">Age:</label>
             <input type="text" id="clientAge" name="clientAge"><br><br>
+                <br>
             <input type="submit" value="Submit" class="btn" id="submit-btn">
         </form>
-        <form method="get" action="http://localhost:3302/clients">
-            <button type="submit">Show clients</button>
-        </form>
+        <br>
+        <button id="showClientsBtn" onclick="location.href='http://localhost:3302/clients'">Show Clients</button>
     </body>
 </html>

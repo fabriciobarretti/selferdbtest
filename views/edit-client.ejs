@@ -6,15 +6,16 @@
   <!-- <link rel="stylesheet" href="/styles/style.css"> -->
   <title>Editing <%= client.name %></title>
 </head>
-<form method="POST" action="http://localhost:3302/addclient">
-    <label for="clientName">Name:</label>
-    <input type="text" id="clientName" name="clientName"><br><br>
-    
+<form method="PUT" action="http://localhost:3302/client/<%= client.id %>/edit"> 
+    <label for="clientName" ">Name:</label>
+    <input type="text" id="clientName" name="clientName" placeholder="<%= client.name %>"">
+    <br><br>
+
     <label for="clientAge">Age:</label>
-    <input type="text" id="clientAge" name="clientAge"><br><br>
+    <input type="text" id="clientAge" name="clientAge" placeholder="<%= client.age %>"><br><br>
     <input type="submit" value="Submit" class="btn" id="submit-btn">
 </form>
 
-  <button id="goBackBtn" onclick="location.href='http://localhost:3302/clients'">Go back</button>
+  <button id="goBackBtn" onclick="location.href='http://localhost:3302/client/<%= client.id %>'">Go back</button>
 </body>
 </html>
