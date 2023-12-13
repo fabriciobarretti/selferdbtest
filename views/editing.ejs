@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" href="/styles/style.css"> -->
   <title>Editing <%= client.name %></title>
 </head>
-<form method="PUT" action="http://localhost:3302/client/<%= client.id %>/edit"> 
+<form method="POST" action="http://localhost:3302/client/<%= client.id %>/edit"> 
     <label for="clientName" ">Name:</label>
     <input type="text" id="clientName" name="clientName" placeholder="<%= client.name %>"">
     <br><br>

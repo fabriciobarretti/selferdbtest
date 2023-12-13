@@ -40,7 +40,7 @@ module.exports = {
         db.query('SELECT * FROM clients2 WHERE id = ?', [id], (error, results) => {
           if(error) { accepted(error); return; }
           if(results.length > 0){ // Verifies and get the first client with the given ID.
-            console.log(results[0]);
+            // console.log(results[0]);
               accepted(results[0]);
           }else {
               accepted(false);

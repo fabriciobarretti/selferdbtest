@@ -39,8 +39,8 @@ module.exports = {
         let clientlist = await queries.showClients();
         let dataKeys = Object.keys(clientlist[0]); // Gets only the keys from the object.
 
-        console.log(clientlist);
-        console.log(dataKeys);
+        // console.log(clientlist);
+        // console.log(dataKeys);
 
         // Making "id" uppercase
         for (i=0;i<dataKeys.length;i++){
@@ -57,16 +57,18 @@ module.exports = {
     // Calling the query with just one client's info.
     client: async (req, res) => {
         let id = req.params.id;
-        console.log(id);
+        // console.log(id);
         let client = await queries.client(id);
-        console.log(client);
+        // console.log(client);
         res.render('client', {client: client});
         
     },
 
-    editClient: async (req, res) => {
+    editingClient: async (req, res) => {
         let id = req.params.id;
         let client = await queries.client(id);
-        res.render(`edit-client`, {client: client });
+        res.render(`editing`, {client: client });
+
+        console.log(`User ID is ${id}.`);
     }   
 };
