@@ -6,16 +6,30 @@
   <!-- <link rel="stylesheet" href="/styles/style.css"> -->
   <title>Editing <%= client.name %></title>
 </head>
-<form method="POST" action="http://localhost:3302/client/<%= client.id %>/edit"> 
-    <label for="clientName" ">Name:</label>
-    <input type="text" id="clientName" name="clientName" placeholder="<%= client.name %>"">
-    <br><br>
+    <span>Name: <input type="text" id="clientName" name="clientName" placeholder="<%= client.name %>"><br><br></span>
+    <span>Age: <input type="text" id="clientAge" name="clientAge" placeholder="<%= client.age %>"><br><br></span>
 
-    <label for="clientAge">Age:</label>
-    <input type="text" id="clientAge" name="clientAge" placeholder="<%= client.age %>"><br><br>
-    <input type="submit" value="Submit" class="btn" id="submit-btn">
-</form>
+    <button id="submit-btn" onclick="editClientPutRequest(client)">Submit</button>
+    <button id="goBackBtn" onclick="location.href='http://localhost:3302/client/<%= client.id %>'">Go back</button>
+    
+    <script>
+      let client = JSON.parse('<%- JSON.stringify(client) %>');
+      
+      function editClientPutRequest (client){
+        let inputName = document.getElementById("clientName");
+        let inputAge = document.getElementById("clientAge");
+        
+        if (client.name !== inputName.value) {
+          var outputName = inputName.value;
+        }
+        
+        if (client.age !== inputAge.value) {
+          var outputAge = inputAge.value;
+        }
+        
+        
 
-  <button id="goBackBtn" onclick="location.href='http://localhost:3302/client/<%= client.id %>'">Go back</button>
+      }
+    </script>
 </body>
 </html>

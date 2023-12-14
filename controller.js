@@ -69,6 +69,6 @@ module.exports = {
         let client = await queries.client(id);
         res.render(`editing`, {client: client });
 
-        console.log(`User ID is ${id}.`);
+        // console.log(`User ID is ${id}.`);
     }   
 };
