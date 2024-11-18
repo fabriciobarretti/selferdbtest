@@ -24,9 +24,18 @@ module.exports = {
       });
     },
 
+    showAddedClient: () => {
+      return new Promise((accepted, rejected) => {
+        db.query('SELECT * FROM clients2 ORDER BY id DESC LIMIT 1;',
+        (error, results) => {
+          if (error) {rejected(error); return;}
+          accepted(results);
+        })
+      })
+    },
+
     showClients: () => {
       return new Promise((accepted, rejected) => {
-        
         db.query('SELECT * FROM clients2',
         (error, results) => {
           if (error) {rejected(error); return;}

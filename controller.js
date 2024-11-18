@@ -26,21 +26,21 @@ module.exports = {
         if (client){
             let adding = await queries.addClient(client.clientName, client.clientAge);
             json.result = client;
-
             console.log(`Client ${client.clientName} was added succesfully.`);
-            
+            var addedClient = await queries.showAddedClient();            
         } else {
             json.error = 'No fields detected.';
-        }
-        res.json(json);
+        }    
+        res.render('client', {client: addedClient[0]})
     },
 
     showClients: async (req, res) => {
         let clientlist = await queries.showClients();
         let dataKeys = Object.keys(clientlist[0]); // Gets only the keys from the object.
 
-        // console.log(clientlist);
-        // console.log(dataKeys);
+
+        console.log(clientlist);
+        console.log(dataKeys);
 
         // Making "id" uppercase
         for (i=0;i<dataKeys.length;i++){
@@ -61,7 +61,6 @@ module.exports = {
         let client = await queries.client(id);
         // console.log(client);
         res.render('client', {client: client});
-        
     },
 
     editingClient: async (req, res) => {

@@ -9,8 +9,8 @@
     <span>Name: <input type="text" id="clientName" name="clientName" placeholder="<%= client.name %>"><br><br></span>
     <span>Age: <input type="text" id="clientAge" name="clientAge" placeholder="<%= client.age %>"><br><br></span>
 
-    <button id="submit-btn" onclick="editClientPutRequest(client)">Submit</button>
     <button id="goBackBtn" onclick="location.href='http://localhost:3302/client/<%= client.id %>'">Go back</button>
+    <button id="submit-btn" onclick="editClientPutRequest(client)">Submit</button>
     
     <script>
       let client = JSON.parse('<%- JSON.stringify(client) %>');
